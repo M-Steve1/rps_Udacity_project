@@ -132,3 +132,14 @@ class ReflectPlayer(Player):
             return random.choice(moves)
         else:
             return self.their_move
+
+
+# AI player, plays by cycling the moves
+class CyclePlayer(Player):
+    def __init__(self):
+        self.index = 0
+
+    def move(self):
+        next_move = moves[self.index]
+        self.index = (self.index + 1) % len(moves)
+        return next_move
