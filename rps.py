@@ -193,3 +193,10 @@ class Game:
                   "the Game, Game over!\n")
         else:
             print(f"{Fore.YELLOW}It's a tie\n")
+
+
+if __name__ == '__main__':
+    p1 = HumanPlayer()
+    p2 = RandomPlayer()
+    game = Game(p1, p2)
+    game.play_game()
