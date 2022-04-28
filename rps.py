@@ -22,3 +22,81 @@ class Player:
     # Inform players of opponent's move
     def learn(self, my_move, their_move):
         pass
+
+
+# win conditions
+def beats(one, two):
+    if one == 'rock' and two == 'paper':
+        return (f"{Fore.BLUE}Player 2 Wins")
+    elif one == 'rock' and two == 'spock':
+        return (f"{Fore.BLUE}Player 2 Wins")
+    elif one == 'paper' and two == 'rock':
+        return (f"{Fore.RED}Player 1 Wins")
+    elif one == 'spock' and two == 'rock':
+        return (f"{Fore.RED}Player 1 Wins")
+    elif one == 'rock' and two == 'scissors':
+        return (f"{Fore.RED}Player 1 Wins")
+    elif one == 'rock' and two == 'lizard':
+        return (f"{Fore.RED}Player 1 Wins")
+    elif one == 'scissors' and two == 'rock':
+        return (f"{Fore.BLUE}Player 2 Wins")
+    elif one == 'lizard' and two == 'rock':
+        return (f"{Fore.BLUE}Player 2 Wins")
+    elif one == 'paper' and two == 'rock':
+        return (f"{Fore.RED}Player 1 Wins")
+    elif one == 'paper' and two == 'spock':
+        return (f"{Fore.RED}Player 1 Wins")
+    elif one == 'rock' and two == 'paper':
+        return (f"{Fore.BLUE}Player 2 Wins")
+    elif one == 'spock' and two == 'paper':
+        return (f"{Fore.BLUE}Player 2 Wins")
+    elif one == 'paper' and two == 'scissors':
+        return (f"{Fore.BLUE}Player 2 Wins")
+    elif one == 'paper' and two == 'lizard':
+        return (f"{Fore.BLUE}Player 2 Wins")
+    elif one == 'scissors' and two == 'paper':
+        return (f"{Fore.RED}Player 1 Wins")
+    elif one == 'lizard' and two == 'paper':
+        return (f"{Fore.RED}Player 1 Wins")
+    elif one == 'scissors' and two == 'lizard':
+        return (f"{Fore.RED}Player 1 Wins")
+    elif one == 'scissors' and two == 'paper':
+        return (f"{Fore.RED}Player 1 Wins")
+    elif one == 'lizard' and two == 'scissors':
+        return (f"{Fore.BLUE}Player 2 Wins")
+    elif one == 'paper' and two == 'scissors':
+        return (f"{Fore.BLUE}Player 2 Wins")
+    elif one == 'spock' and two == 'rock':
+        return (f"{Fore.RED}Player 1 Wins")
+    elif one == 'spock' and two == 'scissors':
+        return (f"{Fore.RED}Player 1 Wins")
+    elif one == 'rock' and two == 'spock':
+        return (f"{Fore.BLUE}Player 2 Wins")
+    elif one == 'scissors' and two == 'spock':
+        return (f"{Fore.BLUE}Player 2 Wins")
+    elif one == 'spock' and two == 'lizard':
+        return (f"{Fore.BLUE}Player 2 Wins")
+    elif one == 'spock' and two == 'paper':
+        return (f"{Fore.BLUE}Player 2 Wins")
+    elif one == 'paper' and two == 'spock':
+        return (f"{Fore.RED}Player 1 Wins")
+    elif one == 'lizard' and two == 'spock':
+        return (f"{Fore.RED}Player 1 Wins")
+    elif one == 'lizard' and two == 'spock':
+        return (f"{Fore.RED}Player 1 Wins")
+    elif one == 'lizard' and two == 'paper':
+        return (f"{Fore.RED}Player 1 Wins")
+    elif one == 'spock' and two == 'lizard':
+        return (f"{Fore.BLUE}Player 2 Wins")
+    elif one == 'paper' and two == 'lizard':
+        return (f"{Fore.BLUE}Player 2 Wins")
+    elif one == 'lizard' and two == 'scissors':
+        return (f"{Fore.BLUE}Player 2 Wins")
+    elif one == 'lizard' and two == 'rock':
+        return (f"{Fore.BLUE}Player 2 Wins")
+    elif one == 'scissors' and two == 'lizard':
+        return (f"{Fore.RED}Player 1 Wins")
+    elif one == 'rock' and two == 'lizard':
+        return (f"{Fore.RED}Player 1 Wins")
+    elif one == two:
+        return (f"{Fore.YELLOW}Tie")
