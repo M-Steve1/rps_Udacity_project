@@ -106,3 +106,16 @@ def beats(one, two):
 class RandomPlayer(Player):
     def move(self):
         return random.choice(moves)
+
+
+# Human player
+class HumanPlayer(Player):
+    def move(self):
+        while True:
+            humanplayer_move = input("rock, paper, scissors, "
+                                     "spock, lizard? > ").lower()
+            if humanplayer_move in moves:
+                break
+            else:
+                print(f"{Fore.RED}Sorry, don't understand you")
+        return humanplayer_move
