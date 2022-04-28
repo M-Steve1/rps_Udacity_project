@@ -100,3 +100,9 @@ def beats(one, two):
         return (f"{Fore.RED}Player 1 Wins")
     elif one == two:
         return (f"{Fore.YELLOW}Tie")
+
+
+# AI player, plays randomly
+class RandomPlayer(Player):
+    def move(self):
+        return random.choice(moves)
