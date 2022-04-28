@@ -8,3 +8,17 @@ init(autoreset=True)
 
 
 moves = ['rock', 'paper', 'scissors', 'spock', 'lizard']
+
+
+# Parent class for all Players
+class Player:
+    def __init__(self):
+        self.my_move = ''
+        self.their_move = ''
+
+    def move(self):
+        return 'rock'
+
+    # Inform players of opponent's move
+    def learn(self, my_move, their_move):
+        pass
