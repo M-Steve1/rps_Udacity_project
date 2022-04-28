@@ -168,3 +168,28 @@ class Game:
             self.player1_score += 1
         elif 'Player 2 Wins' in winner:
             self.player2_score += 1
+
+    def play_game(self):
+        print(f"{Style.BRIGHT}{Fore.BLACK}{Back.GREEN}Game start!")
+        print("Game has 9 rounds")
+        for round in range(1, 9):
+            print(f"{Back.GREEN}{Fore.BLACK}Round {round} --")
+            self.play_round()
+            print()
+            print(f"{Back.GREEN}{Fore.BLACK}Round {round} "
+                  f"score: {Fore.RESET}{Back.RESET}"
+                  f"\t {Fore.RED}Player 1: {self.player1_score}"
+                  f"\t {Fore.BLUE}Player 2: {self.player2_score}")
+            print()
+
+        print(f"Final score: {Fore.RED}Player 1: {self.player1_score}Point(s)"
+              f"\t {Fore.BLUE}Player 2: {self.player2_score}Point(s)")
+        print()
+        if self.player1_score > self.player2_score:
+            print(f"{Fore.RED}Player 1 {Fore.RESET}Wins "
+                  "the Game, Good job!\n")
+        elif self.player2_score > self.player1_score:
+            print(f"{Fore.BLUE}Player 2 {Fore.RESET}Wins "
+                  "the Game, Game over!\n")
+        else:
+            print(f"{Fore.YELLOW}It's a tie\n")
