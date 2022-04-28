@@ -143,3 +143,28 @@ class CyclePlayer(Player):
         next_move = moves[self.index]
         self.index = (self.index + 1) % len(moves)
         return next_move
+
+
+class Game:
+    def __init__(self, p1, p2):
+        self.p1 = p1
+        self.p2 = p2
+        self.player1_score = 0
+        self.player2_score = 0
+
+    def play_round(self):
+        move1 = self.p1.move()
+        move2 = self.p2.move()
+
+        print(f"{Fore.RED}Player 1: {move1}  {Fore.BLUE}Player 2: {move2}")
+        print()
+
+        self.p1.learn(move1, move2)
+        self.p2.learn(move2, move1)
+
+        print(f"\t** {beats(move1, move2)}{Fore.RESET} **")
+        winner = beats(move1, move2)
+        if 'Player 1 Wins' in winner:
+            self.player1_score += 1
+        elif 'Player 2 Wins' in winner:
+            self.player2_score += 1
