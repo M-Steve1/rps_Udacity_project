@@ -119,3 +119,16 @@ class HumanPlayer(Player):
             else:
                 print(f"{Fore.RED}Sorry, don't understand you")
         return humanplayer_move
+
+
+# AI player, copies human player previous move
+class ReflectPlayer(Player):
+    def learn(self, my_move, their_move):
+        self.my_move = my_move
+        self.their_move = their_move
+
+    def move(self):
+        if self.my_move == '':
+            return random.choice(moves)
+        else:
+            return self.their_move
